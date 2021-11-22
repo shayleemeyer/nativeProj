@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   bannerContainer: {
     justifyContent: "center",
     alignItems: "center",
-    flex: 1,
+    /* flex: 1, */
   },
   container: {
     paddingTop: 40,

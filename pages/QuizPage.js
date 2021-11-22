@@ -6,31 +6,34 @@ const QuizPage = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.question}>
-        <Text>this is a question</Text>
+        <Text style={styles.questionText}>this is a question</Text>
       </View>
       <View style={styles.options}>
-        <TouchableOpacity>
-          <Text>Option 1</Text>
+        <TouchableOpacity style={styles.optionsButton}>
+          <Text style={styles.optionsText}>Option 1</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <Text>Option 1</Text>
+        <TouchableOpacity style={styles.optionsButton}>
+          <Text style={styles.optionsText}>Option 1</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <Text>Option 1</Text>
+        <TouchableOpacity style={styles.optionsButton}>
+          <Text style={styles.optionsText}>Option 1</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <Text>Option 1</Text>
+        <TouchableOpacity style={styles.optionsButton}>
+          <Text style={styles.optionsText}>Option 1</Text>
         </TouchableOpacity>
-        <View style={styles.buttons}>
-          <TouchableOpacity>
-            <Text>Skip</Text>
+        <View style={styles.bottom}>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>Skip</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
-            <Text>Next</Text>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>Next</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate(ResultPage)}>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>END</Text>
+          </TouchableOpacity>
+          {/* <TouchableOpacity onPress={() => navigation.navigate(ResultPage)}>
             <Text>End</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
       </View>
     </View>
@@ -47,6 +50,7 @@ const styles = StyleSheet.create({
   },
   question: {
     marginVertical: 16,
+    alignItems: "center",
   },
 
   options: {
@@ -54,17 +58,38 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 
-  buttons: {
+  bottom: {
     marginBottom: 12,
     paddingVertical: 16,
     justifyContent: "space-between",
     flexDirection: "row",
   },
   button: {
-    width: "100%",
     backgroundColor: "#757BC8",
-
-    padding: 20,
+    padding: 12,
+    paddingHorizontal: 12,
     borderRadius: 16,
+    alignItems: "center",
+    marginBottom: 30,
+  },
+  buttonText: {
+    fontSize: 18,
+    fontWeight: "600",
+    color: "white",
+  },
+  questionText: {
+    fontSize: 32,
+  },
+  optionsText: {
+    fontSize: 24,
+    fontWeight: "400",
+    color: "white",
+  },
+  optionsButton: {
+    paddingVertical: 12,
+    marginVertical: 6,
+    backgroundColor: "#DDBDFC",
+    paddingHorizontal: 12,
+    borderRadius: 12,
   },
 });
